@@ -1,0 +1,31 @@
+﻿@model AdminPanel.Models.AddC
+@{
+    Layout = "_Admin";
+}
+<div class="content-body">
+<div class="container-fluid">
+                <div class="row">
+     <div class="col-lg-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <h4 class="card-title">Update categories</h4>
+                                <div class="basic-form">
+                                    <form asp-controller="Category" asp-action="updater" method="post">
+                                        <div class="row">
+                                            <div class="col">
+                                                <input type="text" class="form-control" placeholder="Category name" name="cname" value="@ViewBag.d.cname">
+                                            </div>
+                           
+                                            <div class="row">
+                                                 <button type="submit" class="btn btn-primary" value="updater" style="background-color:#008E97;">Update</button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                     </div>
+                            </div>
+                                </div>

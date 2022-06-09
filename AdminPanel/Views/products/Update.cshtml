@@ -1,0 +1,103 @@
+﻿@model AdminPanel.Models.Add
+ @{
+    Layout = "_Admin";
+}
+ <div class="content-body">
+
+                   <div class="container-fluid">
+                <div class="row justify-content-center">
+                    <div class="col-lg-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="card-title">
+                                    <h4>Add your product</h4>
+                                </div>
+                                <div class="form-validation">
+                                    <form class="form-valide" method="post" asp-controller="Products" asp-action="up" >
+                                    <div class="form-group row">
+                                            <label class="col-lg-4 col-form-label" for="val-username">Product name
+                                            </label>
+                                            <div class="col-lg-6">
+                                                <input type="text" class="form-control" id="val-username" value="@ViewBag.d.name" name="name" placeholder="Enter product name">
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label class="col-lg-4 col-form-label" for="val-skill">Category
+                                            </label>
+                                            <div class="col-lg-6">
+                                                <select class="form-control" id="val-skill" name="category">
+                                                    <option value="@ViewBag.d.category">Please select</option>
+                                                    <option>Man</option>
+                                                    <option>Woman</option>
+                                   
+                                                </select>
+                                            </div>
+                                        </div>
+                                         <div class="form-group row">
+                                            <label class="col-lg-4 col-form-label" for="val-skill">Sub-category
+                                            </label>
+                                            <div class="col-lg-6">
+                                                <select class="form-control" id="val-skill" name="scategory">
+                                                    <option value="@ViewBag.d.scategory">Please select</option>
+                                                    <option>Ethnic wear</option>
+                                                    <option>Western wear</option>
+                                   
+                                                </select>
+                                            </div>
+                                        </div>
+                                         <div class="form-group row">
+                                            <label class="col-lg-4 col-form-label" for="val-skill">Status
+                                            </label>
+                                            <div class="col-lg-6">
+                                                <select class="form-control" id="val-skill" name="status">
+                                                    <option value="@ViewBag.d.status">Please select</option>
+                                                    <option>Available</option>
+                                                    <option>Sold out</option>
+                                   
+                                                </select>
+                                            </div>
+                                        </div>
+                                         <div class="form-group row">
+                                            <label class="col-lg-4 col-form-label" for="val-suggestions">Description 
+                                            </label>
+                                            <div class="col-lg-6">
+                                                <textarea class="form-control" id="val-suggestions" name="Description" value="@ViewBag.d.Description" rows="5" placeholder="What would you like to write?"></textarea>
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label class="col-lg-4 col-form-label" for="val-email">Size 
+                                            </label>
+                                            <div class="col-lg-6">
+                                                <input type="text" class="form-control" id="val-email" name="size" value="@ViewBag.d.size" placeholder="Size">
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label class="col-lg-4 col-form-label" for="val-password">Price</label>
+                                            <div class="col-lg-6">
+                                                <input type="number" class="form-control" id="val-password" name="price" value="@ViewBag.d.price" placeholder="Price of product">
+                                            </div>
+                                        </div>
+                                         <div class="form-group row">
+                                            <label class="col-lg-4 col-form-label" for="val-password">Stock quantity</label>
+                                            <div class="col-lg-6">
+                                                <input type="number" class="form-control" id="val-password" name="stock" value="@ViewBag.d.stock" placeholder="stock quantity">
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label class="col-lg-4 col-form-label" for="val-confirm-password">Image</label>
+                                            <div class="col-lg-6">
+                                                <input type="file" class="form-control" id="val-confirm-password" name="image" placeholder="Choose images">
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <div class="col-lg-8 ml-auto">
+                                                <button type="submit" class="btn btn-primary" style="background-color:#008E97;" value="Insert">Update</button>
+                                            </div>
+                                      </div>
+                                    </form>
+                                </div>
+                            </div>
+                           </div>
+                        </div>
+                      </div>
+                    </div>

@@ -1,0 +1,88 @@
+﻿@model AdminPanel.Models.AddC
+@{
+    Layout = "_Admin";
+}
+
+
+<div class="content-body">
+<div class="container-fluid">
+                <div class="row">
+     <div class="col-lg-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <h4 class="card-title">Add categories</h4>
+                                <div class="basic-form">
+                                    <form asp-controller="Category" asp-action="Add" method="post">
+                                        <div class="row">
+                                            <div class="col">
+                                                <input type="text" class="form-control" placeholder="Category name" name="cname">
+                                            </div>
+                           
+                                            <div class="row">
+                                                 <button type="submit" class="btn btn-primary" value="Add" style="background-color:#008E97;"
+>Add</button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                     </div>
+                            </div>
+                        @*</div>*@
+                
+@*<div class="content-body">*@
+            <div class="container-fluid ctable">
+                 <div class="row">
+                        <div class="col-lg-6">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="card-title">
+                                    <h4>Your categories</h4>
+                                </div>
+                                <div class="table-responsive">
+                                    <table class="table table-hover">
+                                        <thead>
+                                            <tr>
+                                                <th>#</th>
+                                                <th>Name</th>
+            
+                                                  <th>Action</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                    @{
+                                        int i = 1;
+                                    }
+                                    @foreach(var v in ViewBag.d)
+                                    {
+                                        <tr>
+                                            <th>@i</th>
+
+                                            <td>@v.cname</td>
+
+
+                                            <td><span><a data-toggle="tooltip" data-placement="top" title="Edit" asp-controller="Category" asp-action="update" asp-route-cid="@v.cid">
+                                                <i class="fa fa-pencil color-muted m-r-5"></i>
+                                                    </a>
+                                                     <a  data-toggle="tooltip" data-placement="top" title="Delete" asp-controller="Category" asp-action="Delete" asp-route-cid="@v.cid">
+                                                        <i class="fa fa-close color-danger"></i></a></span>
+                                            </td>
+                                           
+                                           
+                                        </tr>
+                                        i++;
+                                    }
+                                   
+                                           
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                         </div>
+                        </div>
+                        </div>
